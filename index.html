@@ -8,30 +8,45 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="bg-white">
     <!-- 성희 -->
     <header>
         <div> <!-- top-menu global-header -->
             <!-- 네비게이션 바 -->
             <!-- 호버 내일 -->
-            <!--이미지 추가 예정-->
-            <div class="navbar">
+            <div class="navbar flex">
                 <!-- 로고 섹션 -->
-                <div class="logo">
+                <div class="logo flex">
                     <a href="#" target="_self">
-                        <img src="https://via.placeholder.com/30" alt="JEJU datahub Logo">
-                        <span>JEJUdatahub</span>
+                        <img src="https://www.jejudatahub.net/img/logo-color.24466187.png" alt="JEJU datahub Logo">
                     </a>
                 </div>
-                
+
                 <!-- 네비게이션 링크 -->
                 <div class="nav-links">
-                    <a href="#">이용안내</a>
+                    <!-- <a href="#">이용안내</a>
                     <a href="#">데이터</a>
                     <a href="#">인포그래픽</a>
                     <a href="#">리포트</a>
                     <a href="#">제주빅데이터센터</a>
-                    <a href="#">정보공개</a>
+                    <a href="#">정보공개</a> -->
+                        <ul class="flex">
+                            <li><a href="">이용안내</a></li>
+                            <li><a href="">데이터</a></li>
+                            <li><a href="">인포그래픽</a></li>
+                            <li><a href="">
+                                리포트
+                                <ul>
+                                    <li><a href="">ai리포트</a></li>
+                                    <li><a href="">정기리포트</a></li>
+                                </ul>   
+                            </a></li>
+                            <li><a href="">제주빅데이터센터</a></li>
+                            <li><a href="">정보공개</a></li>
+                        </ul>
+
+                    </a>
+    
                 </div>
 
                 <!-- 로그인/회원가입 버튼 -->
@@ -43,15 +58,13 @@
         </div>
     </header>
 
-
     <!-- div
         컨테이너
         메인이미지
         두칸 이미지 갖는 클래스
         한칸씩
-    
     -->
-    <main>
+    <main class="container">
         <div class="container">
             <div class="mainbackground2"><!--데이터 검색 -->
                 <h2 id="bluefont">데이터 검색</h2>
@@ -78,6 +91,7 @@
                 </div>
             </div>
         </div>
+
         <div>
             <!-- <5개 컴포넌트> -->
         </div>
@@ -361,6 +375,7 @@
         <!-- div>.section notice-report  -->
         <div class="section notice-report">
         </div>
+
         <div>
             협력사
         </div>

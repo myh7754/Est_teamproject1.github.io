@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topbar</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body, ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }    
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .flex {
+      display: flex;
+    }
+/* 
+    .flex-grow {
+      flex-grow: 1;
+    }
+
+    .mx-4 {
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+    #banner-container {
+      font-size: 1.3rem;
+      padding: 20px;
+      font-weight: bold;
+    }
+
+    .con {
+      border-bottom: 1px solid darkgray;
+    }
+
+    .menu-container {
+      font-size: 1.3rem;
+    }
+
+    .menu-container > ul > li > a {
+      padding: 22.5px;
+      display: block;
+    }
+
+    .menu-container ul > li:hover > a {
+      background-color: black;
+      color: white;
+    }
+
+    .menu-container > ul ul > li > a {
+      display: block;
+      padding: 19.65px;
+    }
+
+    .menu-container > ul ul {
+      position: absolute;
+      display: none;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    }
+
+    .menu-container > ul > li:hover > ul {
+      display: block;
+    } */
+
+  </style>
+</head>
+<body>
+    <header class = "flex">
+      <a href=""><img src="" alt="">img</a>
+
+      <ul>
+        <a href="">
+          1
+            <li>
+              <a href=""><li>1-1</li></a>
+              <a href=""><li>1-2</li></a>
+              <a href=""><li>1-3</li></a>
+            </li>
+        </a>
+        <a href="">
+          2
+            <li>
+              <a href=""><li>2-1</li></a>
+              <a href=""><li>2-2</li></a>
+              <a href=""><li>2-3</li></a>
+            </li>
+        </a>
+        <a href=""><li>3</li></a>
+      </ul>
+
+      <div>
+        <button>버튼1</button>
+        <button>버튼2</button>
+      </div>
+      
+      
+    </header>
+    <hr>
+   <header class="flex con">
+
+    <div id="banner-container">
+      <a href="#">
+        <span>BANNER</span>
+      </a>
+    </div>
+
+    <div class="flex-grow"></div>
+
+    <div class="menu-container">
+      <ul class="flex">
+        <li class="mx-4">
+          <a href="#">
+            <span>ITEM1</span>
+          </a>
+        </li>
+        <li class="mx-4">
+          <a href="#">
+            <span>ITEM2</span>
+          </a>
+        </li>
+        <li class="mx-4">
+          <a href="#">
+            <span>ITEM3</span>
+          </a>
+          <ul>
+            <li><a href="#"><span>ITEM 5</span></a></li>
+            <li><a href="#"><span>ITEM 6</span></a></li>
+            <li><a href="#"><span>ITEM 7</span></a></li>
+            <li><a href="#"><span>ITEM 8</span></a></li>
+            <li><a href="#"><span>ITEM 9</span></a></li>
+          </ul>
+        </li>
+        <li class="mx-4">
+          <a href="#">
+            <span>ITEM4</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+   </header>
+</body>
+</html>

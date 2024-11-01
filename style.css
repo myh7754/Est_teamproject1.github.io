@@ -1,4 +1,5 @@
 /* 초기화 시작 */
+
 body {
     background-color: #fff;
     margin: 0;
@@ -39,18 +40,130 @@ p {
 }
 /* 초기화 끝 */
 
-/* 네비게이션 스타일 */
-.navbar {
+/* 범용 */
+.flex {
     display: flex;
-    justify-content: space-between;
+}
+.gird {
+    display: grid;
+    
+}
+
+.items-center {
     align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* 간격 */
+.justify-between { 
+    justify-content: space-between;
+    
+}
+/* 삭제 */
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+/* 나중에수정 */
+.font-blue { 
+    font-style:#0056b3;
+};
+
+.font-bord{
+    font-weight: bold;
+}
+
+.bg-white {
+    background-color: white;
+}
+.bg-gray {
+    background-color: #fff;
+}
+
+/* 테스트 */
+.bg-test {
+    background-color: #555;
+}
+h5 {
+    font-size: 15;
+    font-weight: bold;
+}
+.gird-2x6 {
+    display: grid;
+    
+    grid-template-columns: repeat(2,);
+    grid-template-rows : repeat(6,auto);
+
+    grid-template-areas: 
+        "box1 box2"
+        "box3 box4"
+        "box5 box6"
+        ;
+    
+    gap: 5px;
+    padding: 5px;
+}
+
+.box1 {
+    grid-area : box1;
+    background-color: red;
+}
+.box2 {
+    grid-area : box2;
+}
+.box3 {
+    grid-area : box3;
+
+}
+.box4 {
+    grid-area : box4;
+
+}
+.box5{
+    grid-area : box5;
+}
+.box6{
+    grid-area : box6;
+}
+
+.box {
+    background-color: #DBB9B8;
+  
+    margin: 5px;
+     width: 150px;
+    height: 150px; 
+    width: 100%;
+    height: 100%;
+  }
+
+/* 더보기 있는거 */
+.h5 > ul> li {
+
+}
+
+
+/* 범용끝 */
+
+/* 네비게이션 스타일 */
+
+
+.navbar {
+    /* display: flex; */
+    justify-content: space-between;
     padding: 10px 20px;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
 }
 
 .navbar .logo {
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
@@ -65,8 +178,11 @@ p {
     color: #0056b3;
 }
 
-.navbar .nav-links {
-    display: flex;
+    /* 위의 nav에 상속이 되니까 다시 flex를 만들어줘서 */
+.navbar .nav-links >ul {
+    /* display: flex; */
+
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -94,7 +210,38 @@ p {
 }
 
 
-.mainbackground {
+.nav-links ul > li:hover > a {
+    background-color: white;
+    color: #0056b3;
+}
+
+.nav-links > ul ul > li > a {
+    display: block;
+    padding: 1px;
+  }
+
+
+  .nav-links > ul ul {
+    position: absolute;
+    display: none;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+  }
+
+  .nav-links > ul > li:hover > ul {
+    display: block;
+  } */
+/* 네비바 끝 */
+
+
+
+/* 영훈 */
+
+/* 영훈 끝 */
+
+
+
+
+/* .mainbackground {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -124,7 +271,6 @@ p {
     align-items: center;
 }
 
-.bluefont {
-    font-family: monospace;
-    color: #0056b3;
-}
+* {
+    box-sizing: border-box;
+}  */

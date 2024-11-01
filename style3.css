@@ -1,0 +1,225 @@
+/* 
+ 초기화 시작
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img, video {
+  max-width: 100%;
+  /* auto : 원래 크기를 따라감 */
+  height: auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  /* padding: 0; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+/* 
+  초기화 끝
+*/
+
+/* 
+  범용 시작
+*/
+.h-screen {
+  height: 200vh;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/* relative를 기점으로 absolute가 위쪽 상단으로 감 */
+.relative {
+  position: relative;
+}
+
+/* 기준점이 왼쪽 상단이 되면서 절대적인 위치를 갖음, top bottom left right로 위치를 잡아야함 */
+.absolute {
+  position: absolute;
+}
+
+/* z축에 대하여 제일 먼저 쌓이게끔 */
+.z-1 {
+  z-index: 1;
+}
+
+/* flex라는 클래스를 두면 범용성있게 플렉스를 사용가능하며, 나름의 규칙을 정한것임 */
+.flex {
+  display: flex;
+}
+
+.flex-inline {
+  display: inline-flex;
+}
+
+/* 플렉스 도구 커스텀 해두고 사용 */
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* justify-item이랑 차이 확인해보기 */
+.justify-center  {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+
+.text-xl {
+  font-size: 20px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+/* 부모 요소의 너비를 100% 가져올 수 있는 상태가 되도록 */
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+/* 16*3.5 = 56px; */
+.h-14 { 
+  height: 3.5rem; 
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-96 {
+  height: 25rem;
+}
+
+/* 그 컨테이너 만큼 꽉차게 */
+.object-cover {
+  object-fit: cover;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/*
+flex는 내부적인 요소가 flex-direction이 수직(상하)으로 쌓이게 되는데,
+inline-flex는 flex-direction이 수평(가로)로 쌓이게됨
+*/
+.btn {
+  display: inline-flex;
+  /* display: flex; */
+
+  /* 아이템이 센터로 가게됨 */
+  align-items: center;
+  justify-content: center;
+  /* padding: 상하 좌우 순서로 값이 들어감 */
+  padding: 0.5rem 1rem;
+
+  /* 꺾어서 살짝 둥그렇게 만듦 */
+  border-radius: 0.25rem;
+  
+  /* 커서는 포인터로 줆 */
+  cursor: pointer;
+}
+
+.bg-black {
+  /* rgb값으로 줄 수 있음 */
+  background-color: rgb(34,34,34);
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* x축( 좌,우 ) */
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+/* 
+  범용 끝
+*/
+
+/* 
+네비게이션 바(탑바, 네비바, 사이드바) 시작
+*/
+#logo {
+  width: 32px;
+  height: 32px;
+}
+
+/* 
+네비게이션 바(탑바, 네비바, 사이드바) 종료
+*/
+
+/* 
+오프닝 1, 시작
+*/
+.img-cover {
+  /* rgba : 투명도 */
+  background-color: rgba(0,0,0,0.2);
+}
