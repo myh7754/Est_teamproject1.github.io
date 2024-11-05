@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./est_style.css">
+  <title>이스트 패밀리 채용</title>
+</head>
+<body class="h-screen bg-black">
+  <div class="flex flex-col">
+
+    <nav class="flex h-14 w-full justify-between bg-white fixed z-1">
+      <div class="flex justify-center items-center gap-3">
+        <img
+        src="./est_top.png"
+        alt="logo"
+        id="logo">
+        <!-- 크기는 안커지고 강조만 사용할경우도 있기에, 클래스를 두개로 -->
+        <h1 class="text-xl font-bold">ESTfamily</h1>
+      </div>
+
+      <div class="flex justify-center items-center gap-2">
+        <button class="btn">
+          <span class="text-sm font-semibold">
+            이스트소프트 부트캠프
+          </span>
+        </button>
+        <button class="btn bg-black">
+          <span class="text-white text-sm">
+            채용 중인 공고
+          </span>
+        </button>
+      </div>
+
+    </nav>
+  </div>
+  <!-- 탑바에 가려서 안보이니 그만큼 빈공간을 주면 보이게됨 -->
+  <div class="h-14"></div>
+  <!-- flex의 no-wrap : 컨테이너의 크기만큼 찌그러뜨리기, relative : 상대적인 위치 --> 
+  <div class="w-full h-96 overflow-hidden flex relative">
+    <img
+     src="https://opening-attachments.greetinghr.com/2024-03-19/b3344723-ffff-48eb-9cc5-b64c88f40dc9/v2.jpg"
+     alt="wall-paper"
+     class="w-full object-cover"
+     >
+     <!-- body의 시작, 왼쪽 위부터 자리잡음 절대적인 위치 -->
+     <div class="absolute h-full w-full img-cover">
+      <span class="text-white">윤보님 화이팅</span>
+     </div>
+
+  </div>
+
+</body>
+</html>
