@@ -209,6 +209,10 @@ hr {
     background-color: white;
     padding : 20px 20px;
 }
+#item3{
+    display: grid;
+    height: 100%;  
+}
 .imgbox2 {
     width: 320px;
     height: 320px;
