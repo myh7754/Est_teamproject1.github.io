@@ -1,33 +1,28 @@
-/* 
- 초기화 시작
-*/
-* {
-    box-sizing: border-box;
-}
+/* 초기화 시작 */
 
 body {
+    background-color: #fff;
     margin: 0;
     padding: 0;
 }
-
+  
 a {
+    /* 링크 밑줄 없애기 */
     text-decoration: none;
     color: inherit;
 }
-
+  
 img,
-video {
+  video {
     max-width: 100%;
-    /* auto : 원래 크기를 따라감 */
     height: auto;
 }
-
+  
 button {
     background-color: transparent;
     border: none;
-    /* padding: 0; */
 }
-
+  
 h1,
 h2,
 h3,
@@ -38,39 +33,591 @@ h6 {
     font-weight: inherit;
     margin: 0;
 }
-
+  
 ol,
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
+  
 p {
     margin: 0;
     padding: 0;
 }
-
-.bg-gray{
+  
+/* 초기화 끝 */
+  
+/* 범용 */
+.flex {
+    display: flex;
+}
+  
+.gird {
+    display: grid;
+}
+  
+.items-center {
+    align-items: center;
+}
+  
+.justify-center {
+    justify-content: center;
+}
+  
+/* 간격 */
+.justify-between {
+    justify-content: space-between;
+  
+}
+  
+/* 삭제 */
+.flex-row {
+    flex-direction: row;
+}
+  
+.flex-col {
+    flex-direction: column;
+}
+  
+/* 나중에수정 */
+.font-blue {
+    font-style: #224da0;
+}
+  
+.font-bord {
+    font-weight: bold;
+}
+  
+.bg-white {
+    background-color: white;
+}
+  
+/* 테스트 */
+.bg-test {
+    background-color: #fff;
+}
+  
+  
+/* 범용끝 */
+  
+/* 네비게이션 스타일 */
+  
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 30px 30px 0px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+  
+  
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 180px;
+}
+  
+.navbar .logo img {
+    height: 30px;
+    margin-right: 8px;
+}
+  
+.navbar .logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0056b3;
+}
+  
+.nav-links {
+    padding-right: 10px;
+    width: 590px;
+    height: 50px;
+    
+}
+  
+/* 위의 nav에 상속이 되니까 다시 flex를 만들어줘서 */
+.navbar .nav-links>ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+  
+.navbar .nav-links a {
+    font-size: 16px;
+    color: #555;
+}
+  
+.navbar .auth-buttons {
+    display: flex;
+    gap: 10px;
+    padding-right: 300px;
+}
+  
+.navbar .auth-buttons button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #666;
+}
+  
+  .navbar .auth-buttons button:hover {
+    color: #0056b3;
+    outline: 1px solid #0056b3
+  }
+  
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu>li {
+    position: relative;
+  }
+  
+  .menu>li>a {
+    display: block;
+    padding: 15px 0px;
+    color: #535353;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  
+  }
+  
+  .menu>li>a:hover {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    /* 밑줄 효과 */
+    border-color: #0056b3 #fff #fff;
+  
+  }
+  
+  /* 드롭다운 메뉴 스타일 */
+  .dropdown-menu {
+    display: none;
+    /* 기본적으로 숨기기 */
+    position: absolute;
+    top: 100%;
+    /* 상위 메뉴 바로 아래에 위치 */
+    left: 0;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    min-width: 150px;
+    outline: 1px;
+    border-color: blue white white;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    /* 텍스트 줄바꿈 방지 */
+  
+  }
+  
+  .dropdown-menu li a .wel {
+    font-size: 12px;
+  
+  }
+  
+  .dropdown-menu li a:hover {
+    color: #0056b3;
+    font-size: 12px;
+  
+  }
+  
+  /* 드롭다운 메뉴가 보이도록 설정 */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  
+  /* 데이터 */
+  
+  .search-box {
+    gap: 10px;
+    margin-bottom: 20px;
+  
+  }
+  
+  .container_sub {
+    background-image: url("https://www.jejudatahub.net/img/bg-home.6b92b93c.jpg");
+    display: ruby-base-container;
+    padding: 64px 0px;
+    margin: 0px 180px;
+    border-radius: 20px;
+  }
+  
+  .search-section {
+    flex-direction: column;
+    /* 세로 방향 정렬 */
+    align-items: flex-start;
+    /* 왼쪽 정렬 */
+  
+  }
+  
+  .search-section h1 {
+    text-align: center;
+    /* 글씨 가운데 정렬 */
+    font-size: larger;
+    /* 제목 왼쪽 정렬 */
+    color: #224da0;
+    /* 글씨 색상 */
+    font-weight: bold;
+    /* 글씨 굵게 */
+    margin-bottom: 10px;
+    /* 제목 아래에 여백 추가 */
+  }
+  
+  .search-section p {
+    color: #224da0;
+    /* 글씨 색상 */
+    font-size: small;
+    /* 글씨 사이즈 작게 */
+    text-align: center;
+    /* 단락 왼쪽 정렬 */
+    margin-bottom: 0px;
+    /* 단락 아래에 여백 추가 */
+  }
+  
+  .search-section div {
+    display: flex;
+    /* 정보 박스들을 flexbox로 설정 */
+    justify-content: space-evenly;
+    /* 항목들 사이 공간 균등 배분 */
+    width: 100%;
+    /* 부모 요소의 너비에 맞게 설정 */
+    margin: 5px 0;
+    /* 위아래 여백 추가 */
+  }
+  
+  .search-section img {
+    width: 50px;
+    /* 이미지의 너비 설정 */
+    height: auto;
+    /* 비율 유지 */
+  }
+  
+  .search-section div>div {
+    text-align: center;
+    /* 정보 박스 내부 텍스트 가운데 정렬 */
+  }
+  
+  /* 검색 */
+  .search-bar {
+    display: flex;
+    /* 검색 바 내부 요소들을 flexbox로 설정 */
+    align-items: center;
+    /* 세로 정렬을 가운데로 설정 */
+    margin-bottom: 20px;
+    /* 아래쪽 여백 추가 */
+  }
+  
+  .search-input {
+    flex: 0 0 300px;
+    height: 20px;
+    /* 입력 필드가 가능한 모든 공간을 차지하도록 설정 */
+    padding: 10px 30px;
+    /* 여백 추가 */
+    border: 1px solid #ccc;
+    /* 입력 필드 테두리 */
+    outline: 2px solid #c8d6f3;
+    /* 테두리 추가 */
+    border-radius: 4px;
+    /* 모서리 둥글게 */
+    font-size: 13px;
+    /* 폰트 크기 설정 */
+    margin: 40px 20px 10px 10px;
+  }
+  
+  .search-input::placeholder {
+    color: #c8d6f3;
+    font-weight: bold;
+  
+  }
+  
+  .search-button {
+    display: inline-block;
+    padding: 13px 20px;
+    /* 버튼 여백 설정 */
+    margin-left: 10px;
+    /* 버튼과 입력 필드 사이의 간격 */
+    background-color: #224da0;
+    /* 버튼 배경색 설정 */
+    color: white;
+    /* 버튼 텍스트 색상 */
+    border: none;
+    /* 버튼 테두리 제거 */
+    border-radius: 4px;
+    /* 모서리 둥글게 */
+    cursor: pointer;
+    /* 커서 포인터로 변경 */
+    font-size: 14px;
+    /* 버튼 폰트 크기 설정 */
+    white-space: nowrap;
+    /* 텍스트 가로 표시 */
+    margin: 40px 0px 10px 0px;
+  }
+  
+  .search-button:hover {
+    background-color: #5775b3;
+    /* 버튼 호버 시 배경색 변경 */
+  }
+  
+  .info-section {
+    display: flex;
+    /* 자식 요소 정렬 */
+    justify-content: space-around;
+    /* 간격 유지 */
+    align-items: center;
+    /* 세로축 중앙 정렬 */
+    margin-top: 50px;
+    /*위에 20px 여백 추가*/
+    background-color: #e7eef8;
+    /* 배경색상 */
+    padding: 5px;
+    /* 내부 20px 여백 추가 */
+    border-radius: 8px;
+    /* 모서리 둥글게 */
+    list-style-type: none;
+    margin: 20px 10px 10px 40px;
+  
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    /* 세로 방향 정렬 */
+    align-items: center;
+    /* 세로축 중앙 */
+    color: #224da0;
+    padding: 5px 5px 20px 0px;
+  }
+  
+  .info-item img {
+    width: 0px;
+    height: 30px;
+    margin-bottom: 9px;
+    align-items: center;
+    padding: 0px 5px 10px 0px;
+  }
+  
+  .number {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px 20px 10px 20px;
+  }
+  
+  .label {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #68799c;
+    padding: 0px 0px 10px 0px;
+    font-weight: bold;
+  
+  }
+  
+  #screen_left {
+    float: left;
+    width: 50%;
+  }
+  
+  #screen_right {
+    /* left: 100px; */
+    /* top: 50px; */
+    /* right: 100px; */
+    width: 50%;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #screen_right img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* 복지 화살표 */
+  .container7 {
+    display: block;
+    padding: 80px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  /* 화살표 < 회색 */
+  .hover-image-a {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAMKADAAQAAAABAAAAMAAAAADbN2wMAAABlElEQVRoBe2XTU6EQBCFQVyrh/HnAGbwIBC4gjuHpUeAwEFmkjmAP4dx3BOsMnSChEIy/QpdFMlMD3R39fdedcEQBHaYA+aAOWAOmAPmgDlgDqziQFmWW/4gFwuRweZi9eBP/Zgiz/Pt3PilfasIGMF/s4Vh+Jhl2fNSUGncmdSBui7Af0RRdECsoSpAgifwOEmS938tYAqegI8MT1vnDQHPMVRqQIKnfb9BwrOAc/5CHhI87fk4TVOY844ZmoFf4F/dosgWJuAv4NkIyF1Igqf4D7RtVJx3WfTOgAD/SQvE9LR9cQtptZAMaMEtiestoP9PU4wWu6DzHWXnbnQdfuotgIkEEZfUtavr+hZOPQjoXQODWIFQD8f+GaBSzFABLEYSofEU5vXgAtYWAakBhh4eMzWxr6rqZjjW97eKAIaaEtF13RV17ZumufYFd/NVtpALzu1UTVA98AvNBvFOoJYBJ0LKRNu2926MT6sugOEmRBSI92Ef4SfN5e3Ub6mT5tskc8AcMAfMAXPAHDAHzIGfDnwBinGDw50z1hwAAAAASUVORK5CYII=');
+    opacity: 1;
+  }
+  
+  /* 화살표 > 회색*/
+  .hover-image-b {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAMKADAAQAAAABAAAAMAAAAADbN2wMAAACg0lEQVRoBe2Xz2tTQRDH++JDgwFJoKeUHPQQ0P9A0EOgGkgRrYJ4iIKGJEj7B1gPHtW7UElCLMZczKEVxEB/QC6Ctx4VctBL9CQkeJAor4nfwRdYhrZWd9ZL58Fmd+Yt8z7z3X2zL1NTeqkCqoAqoAqoAqqAKnB4FfAkUq9UKscRp4X2oFwub0vEPGiMyEEn7jWv1Wodxb01tDm09VqtdnqvuS781gn0+/0mwC6GcNOj0WgTSZx0AbtbTOsEPM97jTY2gs8gia16vZ40fM6G1gmUSqUXoFtkhKeCINjEuzHN/OKmdQJEhCSW0S0xujOw15vN5gnmFzVFqtCECIo/wvjexA77t+izqE7fmV/EFFmBCQkgaRWeTuywP4d+LaxW7Ja9KboChDMej71qtdrAMM/wVhOJxHVcO8xvZYquAJFQRUqn07cxfMXIrg4Gg2eUIPNbmeIJEE0mkwlSqdQNJLNl0gH+FlbniemzHTtJgKByudyPaDR6BcN3DHIhfNmZ+99MZwnsh8MOvv2m/vGeswTa7fax4XBI78FZkwLwyzg37ps+m7GTBDqdjt/r9V5iz8+acIBvFItFfmqbU/56LJ4AVZlut7uC/jKjWY3H43cktw/FP8IeYm0mk0n6rCiwQBs4A67hDAiY39oUXQGUyMcgusuo6FNiHvA/mV/EFDtUAL+EbfOQUW3HYrFMPp//xvxipsgK4A/Mwi7w70GZdQlPKlivAJS/iTjPkYAZ66Pv++cLhcIXeojLy7cNDvBLiGHCf45EIrP/A57YrbcQqgt9dW5QMFxfAX8Btf7Tb9P9r3UCYXWZB+obtCzgP7jH1ieoAqqAKqAKqAKqgCqgCpACvwCyvqqsL12ujwAAAABJRU5ErkJggg==');
+    opacity: 1;
+  
+  }
+  
+  /* 화살표 < 파란색*/
+  .hover-image-a:hover {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAMKADAAQAAAABAAAAMAAAAADbN2wMAAABoklEQVRoBe1XzUoDMRDOpLmr+AqivoB3QVpvQj1L91GsBx9E8FzW9lYQvHjw5wWsP4+g1pOHpXGnMKDLJiy7k6zKFJZ0k8zk+5mEjVLyEwVEAVFAFBAFRAFRQBSIosDGwdkQH87FOpzJfLkQ+MLaY6vU7vp2H14f0ivf/KpjUQgQeAKFJNa2+p9vs/Sa+uq2pm5g1bgi+GUcqHel4LJqDt887RtsOuYCb4zpvYwH903zYzxwJCnL4QA/z8F3Z6Oju7KYOn1BCMQCj4TZS8gJXkOPU3lyi9UBL/g0uaVFOVs2Am2ARyFYCLjAd0DvP14MbjgVL+ZqTKAMPCj40HnNhwaPZNg3cVGh0O+NHUCAZS7kxTn/EyVECrtIGDw+A51AuDaLA22SYN0DT+NkqAFOiNCytWolW9jp5uH5zo9+phdWBwiTs5yYv4NwPVYHiIDTiSxjdyKIA0TE4UR+F9DdX/85HYtEkBIi8Ng6ymlVWbv3fV7d/1HuxHiBx4s83oURKJ5Uz5PktC7o1uJwT+DTGgBZWBQQBUQBUUAUEAVEgX+mwBfvmcCUhecjFwAAAABJRU5ErkJggg==');
+    /* 호버 숨기기 */
+  }
+  
+  /* 화살표 > 파란색*/
+  .hover-image-b:hover {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAMKADAAQAAAABAAAAMAAAAADbN2wMAAACzElEQVRoBe1Yz2sTQRSet41NolJRe9FCwbhYsLd48uAvqC0ISaolhWq7/igIEv0D6smT9q72qCatBlswv6xgK+hB8BZPWqtppAX10CJYCklKss+ZYuxssCVxZoPgDISZ+Xb3zfd9M/seG0JUUw4oB5QDygHlgHJAOfD/OtAgQ/qhy6mt7pau2O72ng/fZ2LfZMSsNgZUe+NG97UHxxtz+VyKEOwEAkuaA45+ihkzG90vG9dEA+YLuTFGnsVBgs1mEafbfJF9onGrfV5YAGhA3QcsL0hFtBSJ+aLNH91bxuzshQVk4saoppGrPEmqxlMkhekDfY+aedyOsbAARiqTOD9CNG2IJ4hIDpZWVp/r58aaeFz2WIoARiqbMIbpUaK/9UZ3wmsulyZZllpH5Y6Es1AlHY8/MkLQvGLFYcrtcvveTfSuWnHxmbQdKFOZSwyECADNTHzDTpqtosHguJS6w0eWLgAAsNXbepFubZxfCBHPpAv5e7SXuutSg/GE9WvPnOb84lOC2MHjBMjdbPKCJWtZrtc4kb4D5fUzt08Vtu+Ablqd35SxtR5JyOML37JgAhPbBGzKiR6zTa/XcNE2AewIrfzAOK3Mh618YCSbNK5bsb+f2SLg+I2XDpxffFx5/gG0yFzSkHb+mWzpAliWWUgv3Kd9gPeVZqcnXqfrEstSPC46lp6XR9/up4UMB63E1gpZz6uJ3qIVF59J3QE9EB7+QxV+vXPPrtN2VGEmX1od0P0PhkwkN3lPafA0NDlOZB72L/O4zLEUAXogEjJN8w5PDIC8b9jWeOxj9OwSj8seCwvQuyMDZgnD9Hvsdyw6yDrAeWQ22fdVNuHKeI5KoNY5muizkocvDgId9SDPuAq/xC6nu5++SlMs2K+P+pOzKeMzm9ejCQtg2YVlGcp+ErZoXfX8R6IeBqk1lAPKAeWAckA5oBxQDvzLDvwElGjPn1E8wGUAAAAASUVORK5CYII=');
+  
+  }
+  
+  .underline {
+    text-decoration: none;
+    /*기본 상태 밑줄X */
+    color: black
+  }
+  
+  .underline:hover {
+    text-decoration: underline;
+  }
+  
+  /*복지 2부분*/
+  .container_1 {
+    /* 화면 컨테이너 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    /* 화면 전체 높이를 차지하여 중앙 배치 */
+  
+  }
+  
+  .carouselimg {
+    width: 100%;
+    height: auto;
+  
+  }
+  
+  .carousel {
+    display: flex;
+    /* 전체 컨테이너 설정 */
+    align-items: center;
+    /* 가운데 정렬 */
+    gap: 10px;
+    /* 간격 조절 */
+    height: 200px;
+  }
+  
+  .arrow {
+    background: none;
+    /* 버튼 투명하게 */
+    border: none;
+    /* 테두리 제거 */
+    font-size: 24px;
+    /* 화살콘 아이콘 크기 조절 */
+    cursor: pointer;
+    /* 마우스 포인터 변경 */
+  }
+  
+  .cards {
+    display: flex;
+    /* 카드 가로 방향 */
+    gap: 20px;
+    /* 카드 간격 조절 */
+    overflow-x: auto;
+    /* 가로 방향 스크롤 */
+    padding: 52px 64px;
+    /* 컨테이너 상하 여백 */
+  
+  }
+  
+  .card {
+    width: 160px;
+    /*  카드 너비 */
+    padding: 1px 26px;
+    /* 카드 내부 여백 */
+    text-align: center;
+    /* 카드 내부 텍스트 가운데 정렬 */
+    background-color: #fff;
+    /* 카드 배경색 지정 */
+    border-radius: 10px;
+    /* 카드 모서리 둥굴게 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 카드 그림자 */
+    border-bottom: 4px solid transparent;
+    border-right: 3px solid transparent;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    border-bottom: 4px solid darkgray;
+    border-right: 3px solid darkgray;
+    box-shadow: 0 2px 8px rgba(139, 133, 100, 0.1);
+    /* 수평, 수직, 흐림, 색상 */
+    transition: box-shadow 0.3s ease;
+    /* 부드러운 전환 효과 */
+  }
+  
+  .card img {
+    width: 160px;
+    /* 이미지 크기 일정하게 */
+    height: 160px;
+    border-radius: 10%;
+    /* 이미지 원형 */
+    margin-bottom: 5px;
+    /* 이미지와 텍스트 사이 간격 */
+    padding: 0px;
+  }
+  
+  .card h3 {
+    font-size: 20px;
+    /* 카드 제목 설정 */
+    margin: 20px 0;
+    /* 제목 위아래 여백 */
+  }
+  
+  .card p {
+    font-size: 16px;
+    /* 텍스트 글자 */
+    color: #888;
+    /* 텍스트 색상 */
+  }
+  
+  /* --------- */
+  
+  .bg-gray {
     background-color: #F4F4F4;
-}
-.bg-white{
-
-}
-
-/* 
-    초기화 끝
-  */
-
-/* 범용 시작 */
-
-h5 {
+  }
+  
+  .bg-white {
+    background-color: white;
+  }
+  
+  
+  h5 {
     /* 폰트사이즈 */
     font-weight: bold;
     font-size: 24px;
-}
-
-h6 {
+  }
+  
+  h6 {
     /* 폰트사이즈 */
     /* background-color: #8ca0ff; */
     font-size: 16px;
@@ -78,313 +625,498 @@ h6 {
     grid-column: 2 / span 2;
     width: 419px;
     height: 24px;
-    margin : 0px 0px 0px 20px;
-
-}
-.flex {
-    display: flex;
-}
-.gird {
-    display: grid;
-    
-}
-
-.items-center {
-    align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-/* 간격 */
-.justify-between { 
-    justify-content: space-between;
-    
-}
-/* 삭제 */
-.flex-row {
-    flex-direction: row;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-/* 나중에수정 */
-.font-blue { 
-    font-style:#0056b3;
-};
-
-.font-bord{
-    font-weight: bold;
-}
-
-
-
-/* 테스트 종료 */
-
-.con {
-    border-bottom: 1px solid darkgray;
-}
-
-
-/* 범용끝 */
-
-/* 네비게이션 스타일 */
-
-
-.navbar {
-    /* display: flex; */
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-}
-
-.navbar .logo {
-    /* display: flex; */
-    align-items: center;
-}
-
-.navbar .logo img {
-    height: 30px;
-    margin-right: 8px;
-}
-
-.navbar .logo span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #0056b3;
-}
-
-    /* 위의 nav에 상속이 되니까 다시 flex를 만들어줘서 */
-.navbar .nav-links >ul {
-    /* display: flex; */
-
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.navbar .nav-links a {
-    font-size: 14px;
-    color: #555;
-}
-
-.navbar .auth-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.navbar .auth-buttons button {
-    padding: 8px 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #555;
-}
-
-.navbar .auth-buttons button:hover {
-    background-color: #f0f0f0;
-}
-
-
-.nav-links ul > li:hover > a {
-    background-color: white;
-    color: #0056b3;
-}
-
-.nav-links > ul ul > li > a {
-    display: block;
-    padding: 1px;
+    margin: 0px 0px 0px 20px;
+  
   }
-
-
-  .nav-links > ul ul {
-    position: absolute;
-    display: none;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
-  }
-
-  .nav-links > ul > li:hover > ul {
-    display: block;
-  } */
-/* 네비바 끝 */
-
-
-/* 영훈 스타일 시작 */
-.videoh6margin{
+  
+  .videoh6margin {
     margin: 20px 20px 0px;
-}
-
-.iconbox {
+  }
+  
+  .icon-newbox {
+  
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .address {
+    /* footer 어드레스 폰트 */
+    display: inline-block;
+    color: rgb(153, 153, 153);
+    font-family: Apple SD Gothic Neo, 애플 SD 산돌고딕 Neo, Montserrat, Noto Sans KR, 나눔고딕, NanumGothic, 맑은 고딕, Malgun Gothic, 돋움, Dotum, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+  
+    height:21px;
+    padding-right: 20px;
+  }
+  
+  .iconbox {
     display: flex;
-    grid-row : 1 / span 2;
+    grid-row: 1 / span 2;
     width: 52px;
     height: 52px;
     border-radius: 4px;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+  }
+
+  .iconbox2 {
+    display: flex;
+    grid-row: 1 / span 2;
+    width: 52px;
+    height: 52px;
+    border-radius: 4px;
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    content: url(https://www.jejudatahub.net/img/ico-chart-line-multi.3323751c.png);
+    
+  }
+  .iconbox3 {
+    display: flex;
+    grid-row: 1 / span 2;
+    width: 52px;
+    height: 52px;
+    border-radius: 4px;
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    content: url(https://www.jejudatahub.net/img/ico-chart-bubble.9e90bc20.png);  
+}
+  .iconbox4 {
+    display: flex;
+    grid-row: 1 / span 2;
+    width: 52px;
+    height: 52px;
+    border-radius: 4px;
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAIAAAE9HbwqAAAACXBIWXMAAAsTAAALEwEAmpwYAAALEmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuN2E3YTIzNiwgMjAyMS8wOC8xMi0wMDoyNToyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMS0xMC0wNVQxMzowODoyMCswOTowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjEtMTAtMjhUMTQ6MTU6NTErMDk6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjEtMTAtMjhUMTQ6MTU6NTErMDk6MDAiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDoxYTFlMWFmNC1lNjFkLWNhNDktYWQzNS1lZDJiMTAzMTMyNTAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ZTQ5NWQyODUtOGUwNy1kYjRhLWEzN2ItY2VlODk5MmJiOWE3IiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDozNmU2YzQ3Ny04ODA0LWVlNDMtYjdhYS1iYjQzNDk3MThjMDMiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiB0aWZmOk9yaWVudGF0aW9uPSIxIiB0aWZmOlhSZXNvbHV0aW9uPSI3MjAwMDAvMTAwMDAiIHRpZmY6WVJlc29sdXRpb249IjcyMDAwMC8xMDAwMCIgdGlmZjpSZXNvbHV0aW9uVW5pdD0iMiIgZXhpZjpDb2xvclNwYWNlPSI2NTUzNSIgZXhpZjpQaXhlbFhEaW1lbnNpb249IjUyIiBleGlmOlBpeGVsWURpbWVuc2lvbj0iNTIiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjQxNzdhM2EzLWU1YTMtOTg0MC1hM2E0LTdjMTIzNzZiNjkyZSIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0wNVQxMzowODoyMCswOTowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo2YmQyYmJhYS0wNjc4LTQ0NDktOTQxZC0zNzcwMzdmMzJiM2UiIHN0RXZ0OndoZW49IjIwMjEtMTAtMDZUMTU6NDU6MzErMDk6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NTliZjc5YTctM2E4Ny1jODQ1LTljYWMtMWIwMGYwMTQ4MGI1IiBzdEV2dDp3aGVuPSIyMDIxLTEwLTI4VDE0OjE1OjUxKzA5OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjIuNSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNvbnZlcnRlZCIgc3RFdnQ6cGFyYW1ldGVycz0iZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iZGVyaXZlZCIgc3RFdnQ6cGFyYW1ldGVycz0iY29udmVydGVkIGZyb20gYXBwbGljYXRpb24vdm5kLmFkb2JlLnBob3Rvc2hvcCB0byBpbWFnZS9wbmciLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmU0OTVkMjg1LThlMDctZGI0YS1hMzdiLWNlZTg5OTJiYjlhNyIgc3RFdnQ6d2hlbj0iMjAyMS0xMC0yOFQxNDoxNTo1MSswOTowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjUgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1OWJmNzlhNy0zYTg3LWM4NDUtOWNhYy0xYjAwZjAxNDgwYjUiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDozNmU2YzQ3Ny04ODA0LWVlNDMtYjdhYS1iYjQzNDk3MThjMDMiIHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjM2ZTZjNDc3LTg4MDQtZWU0My1iN2FhLWJiNDM0OTcxOGMwMyIvPiA8cGhvdG9zaG9wOkRvY3VtZW50QW5jZXN0b3JzPiA8cmRmOkJhZz4gPHJkZjpsaT41RDU0NjE1QTA0Mjk1MTI4Q0RCODQ1RUM5QzAyRTY4OTwvcmRmOmxpPiA8L3JkZjpCYWc+IDwvcGhvdG9zaG9wOkRvY3VtZW50QW5jZXN0b3JzPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtPgJwYAAAFhSURBVGiB7Ze7DcIwEIYPlFHSZRgqhqDODnSZhIph3LFLKIycy/l3/MBIZ+GvQTin838vOzmt60oeZ/szXh7j5bGYz+oJ2g7Olohu9ysRzROd3ZL0+3pexSr2C1Y3WYshKwtYDVgNZzHe0jwhX1iaz8D/uLjt/tb5LgJCybG6dnbQiJvm6+MunT4nMdWfzF58X9oXhVhSMvx9Ea8fbMa+W09BFvNxqT2O1H1T7RJJlZfIEHogSsRTZeE95/i9uoPW4diZFhorq6tcWXyw+Pil4GT3cSKbOnfrJJbC0lQp/kqdbnf4gPJbT0wFPJ1Ie7C6+06WIjT/8IDyC6I7d62UQuNdodtdnwo17v7qYqwcbF0qx1oX1eKCX1CQ6Dvz8YlN4TcbiOrMdXGlqD5K4gOR9eEYHQhOdDhUl7WLK6W1gciaAEHWQAh+/r5Zly6ulNYGQtBvCEwXV4rqgVCduS6ulDeu5JnjJctAJgAAAABJRU5ErkJggg==);
+}
+.back {
+    display: flex;
+    grid-row: 1 / span 2;
+    width: 52px;
+    height: 52px;
+    border-radius: 4px;
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    background-color: #6ec3ee;
+}
+  
+.cart {
+    width: 30px;
+    height: 30px;
+    content: url('data:image/png;base64,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');
+}
+.shop {
+    width: 30px;
+    height: 30px;
+    content: url('data:image/png;base64,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')
 }
 
-.iconNumber{
+.iconNumber {
     background-color: #224DA0;
     color: white;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    
-    font-style : normal;
+  
+    font-style: normal;
 }
-.alinkPlus{
-
+  
+.alinkPlus { 
     color: #999999;
     margin: 8px 0px 0px;
-
+  
 }
+  
+/* 데이터란 왼쪽 화살표 */
 .rightSort {
     display: flex;
-    justify-content: flex-end; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: flex-end;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
 }
-.leftSort {
+  
+  .rightSort a {
+    display: inline-block;
+    /* a 태그를 블록처럼 다룸 */
+    position: relative;
+    /* position을 relative로 설정 */
+  }
+  
+  .rightSort img {
+    width: 50px;
+    /* 이미지 너비 설정 */
+    height: auto;
+    /* 비율 유지 */
+    transition: opacity 0.3s ease;
+    /* 전환 효과 */
+  }
+  
+  .rightSort img.hover {
+    position: absolute;
+    /* 호버 이미지의 위치를 절대적으로 설정 */
+    top: 0;
+    /* 상단 정렬 */
+    left: 0;
+    /* 좌측 정렬 */
+    opacity: 0;
+    /* 기본적으로 보이지 않음 */
+  }
+  
+  .rightSort a:hover img.base {
+    opacity: 0;
+    /* 호버 시 기본 이미지를 투명하게 만듦 */
+  }
+  
+  
+  .leftSort {
     display: flex;
-    justify-content: flex-start; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-}
-
-.date {
+    justify-content: flex-start;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+  }
+  
+  .leftSort a {
+    display: inline-block;
+    /* a 태그를 블록처럼 다룸 */
+    position: relative;
+    /* position을 relative로 설정 */
+  }
+  
+  .leftSort img {
+    width: 50px;
+    /* 이미지 너비 설정 */
+    height: auto;
+    /* 비율 유지 */
+    transition: opacity 0.3s ease;
+    /* 전환 효과 */
+  }
+  
+  .leftSort img.hover {
+    position: absolute;
+    /* 호버 이미지의 위치를 절대적으로 설정 */
+    top: 0;
+    /* 상단 정렬 */
+    left: 0;
+    /* 좌측 정렬 */
+    opacity: 0;
+    /* 기본적으로 보이지 않음 */
+  }
+  
+  .leftSort a:hover img.base {
+    opacity: 0;
+    /* 호버 시 기본 이미지를 투명하게 만듦 */
+  }
+  
+  .leftSort a:hover img.hover {
+    opacity: 1;
+    /* 호버 시 호버 이미지를 보이게 만듦 */
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  /* .left {
+    justify-items: start;
+  }
+  
+  .right {
+    justify-items: end;
+  } */
+  
+  
+  .date {
     /* 날짜 폰트사이즈 */
-    /* background-color: red; */
-    color: #999999;
+    /* 추가 */
     font-family: Apple SD Gothic Neo, 애플 SD 산돌고딕 Neo, Montserrat, Noto Sans KR, 나눔고딕, NanumGothic, 맑은 고딕, Malgun Gothic, 돋움, Dotum, sans-serif;
+    color: #999999;
     font-size: 12px;
     width: 82px;
-    height:15px;
-    margin : 0px 0px 0px 20px;
-}
-.videodatemargin{
+    height: 15px;
+    margin: 0px 0px 0px 20px;
+  }
+  
+  .videodatemargin {
     margin: 4px 20px 0px;
-}
-
-.date::after{
-    content: "|"; /* 텍스트나 기호를 추가 */
+  }
+  
+  .date::after {
+    content: "|";
+    /* 텍스트나 기호를 추가 */
     color: #E1E1E1;
-    font-size: 0.9em;      /* 폰트 크기 */
-    margin: -5px 0px 0px;      /* 여백 추가 */
-}
-
-.discription {
+    font-size: 0.9em;
+    /* 폰트 크기 */
+    margin: -5px 0px 0px;
+    /* 여백 추가 */
+  }
+  
+  .discription {
     /* 날짜옆 폰트 사이즈 */
     font-size: 12px;
     /* background-color: blue; */
     color: #999999;
     width: 335px;
-    height:18px;
-}
-.discriptionOver{
+    height: 18px;
+  }
+  
+  .discriptionOver {
     width: 335px;
-    height:36px;
-}
-.overtext{
-    overflow : hidden;
+    height: 33px;
+  }
+  
+  .overtext {
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
+  }
 
-/* 범용 끝 */
-
-.container {
+  
+  .container {
     display: block;
-    padding: 52px 0px ;
+    padding: 52px 0px;
     flex-wrap: wrap;
     justify-content: center;
-}
-.container2-1 {
+  }
+  
+  .container2-1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0px;
-}
-
-.container2-1flex{
-    display: flex;
-    width :531px;
-    margin : 0px 0px 24px;
-    
-}
-.containerflex{
-    display: flex;
-    width :1180px;
-    margin : 0px 0px 24px;
-
-    justify-content: space-between;
-    align-items: center; /* 요소들이 세로 가운데 정렬되도록 */
-}
-.container1-2{
+  }
+  
+  .container2-1grid {
     display: grid;
-    grid-template-rows: repeat(2,auto);
-    grid-template-columns: repeat(1,auto);
-    /* margin: 0px 59px 0px 0px; */
+    grid-template-columns: repeat(2, auto);
+  }
+  
+  .container2-1flex {
+    display: flex;
+    width: 531px;
+    margin: 0px 0px 24px;
+    font-size: 14px;
 
-}
-.container1-3 {
+  }
+  
+  .containerflex {
+    display: flex;
+    width: 1180px;
+    margin: 0px 0px 24px;
+  
+    justify-content: space-between;
+    align-items: center;
+    /* 요소들이 세로 가운데 정렬되도록 */
+  }
+  
+  .container1-2 {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(1, auto);
+    /* margin: 0px 59px 0px 0px; */
+  }
+  
+  /* 추가 */
+  .container1-2flex {
+    display: flex;
+    flex-direction: column;
+    
+    width :490px;
+    height: 52px;
+    gap: 0px;
+    
+  }
+  
+  .container1-3 {
     /* background-color: grey; */
     display: grid;
     grid-template-rows: repeat(3, auto);
     gap: 5px;
     /* margin: 0px 59px 0px 0px; */
-}
-
-/* 상자 */
-.container3-2 {
+  }
+  
+  .container1-4 {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container3-1 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+  }
+  
+  /* 상자 */
+  .container3-2 {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     width: 490px;
-    height:52px;
-
-}
-.container3-2video{
+    height: 52px;
+  }
+  
+  .container3-2video {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     justify-content: center;
     width: 1180px;
     gap: 0px 20px;
-}
-.containerboxVideo{
-    width:  380px;
+  }
+  
+  .containerboxVideo {
+    width: 380px;
     height: 242px;
     border-radius: 5px;
     margin: 20px 0px 0px;
     background-color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 수평, 수직, 흐림, 색상 */
-
-}
-.containerboxVideo:hover{
-    border-bottom: 4px solid darkgray;
-    border-right: 3px solid darkgray;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 수평, 수직, 흐림, 색상 */
-    transition: box-shadow 0.3s ease; /* 부드러운 전환 효과 */
-}
-
-
-.containerbox {
-    width:  531px;
-    height: 90px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  
+  }
+  
+  .containerboxVideo:hover {
+    border-bottom: 4px solid darkgray transparent;
+    border-right: 3px solid darkgray transparent;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .containerbox {
+    width: auto;
+    height: auto;
     border-radius: 5px;
-    padding : 20px;
+    padding: 20px;
     background-color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 수평, 수직, 흐림, 색상 */
+    align-items: center;
+    align-content: center;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .containerbox:hover {
+    border-bottom: 4px solid darkgray transparent;
+    border-right: 3px solid darkgray transparent;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .cloumnstart2 {
+    grid-column-start: 2;
+  }
+  
+  .cloumnstart2 {
+    grid-column-start: 2;
+  }
+  
+  .cloumnstart3 {
+    grid-column-start: 3;
+  }
+
+  .grid_merge1 {
+    grid-column: 1 / 3;
+    grid-row: 1 /  2;
+  }
+  
+  .grid_merge2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+  
+  /* 카로셀 섹션*/
+  .carousel-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width : 100%;
+    margin : 0px 0px 24px;
+    padding : 32px 0px;
+    height: 100px;
+  }
+  
+  .carousel-btn-size {
+    width: 38px;
+    height: 38px;
+    margin: 0px 50px;
+  }
+  
+  .carousel-label {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 35px;
+  }
+  
+  
+  /* footer 추가 */
+  .footer2-1flex{
+  
+    display: flex;
+    /* width가 100%으로 되어야 고정 가능 */
+    width : 100%;
+    height: 70px;
+    margin : 0px 0px 24px;
+    margin-top: 50px;
+    padding: 5px 5px 50px 50px;
+    justify-content: center;
+  }
+  
+  .footer {
+    display : flex;
+    justify-content: center;
+    width: 840px;
+    /* 일단 px로 고정 후 나중에 확인 */
+    /* width: calc(100% / 2);
+    justify-content: flex-end; */
+    height: 80px;
+    margin-left: 120px;
+    align-items: baseline;
+    flex-direction: column;
+  }
+  
+  /* footer 여백, 센터 고정 시키기 위함 */
+  .footer-blank {
+  
+    width: 500px;
+    /* 마찬가지 */
+    /* width: calc(100% / 2); */
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px 50px 50px;
+  }
+  
+  /* 이미지 사이즈 */
+  .datahub-img {
+    width: 180px;
+    height: 32px;
+}
+  
+
+  
+  /* flex 리스트 방향 행으로 정렬 */
+.footer-li {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.containerbox:hover{
-    border-bottom: 4px solid darkgray;
-    border-right: 3px solid darkgray;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 수평, 수직, 흐림, 색상 */
-    transition: box-shadow 0.3s ease; /* 부드러운 전환 효과 */
-}
-
-/* 영훈 스타일 끝 */
+  
